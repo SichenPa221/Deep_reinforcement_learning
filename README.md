@@ -12,60 +12,6 @@ The train process with cnn|The evaluate process with cnn|train plot
 :---------------:|:------------------:|:-------------------------:
 ![](https://github.com/borninfreedom/kuka-reach-drl/blob/main/pictures/reach_train_with_cnn.gif)|![](https://github.com/borninfreedom/kuka-reach-drl/blob/main/pictures/reach_result_with_cnn.gif)|
 
-
-# Installation guide (Now only support linux and macos)
-**I strongly recommend using Conda to install the env, because you will possible encounter the mpi4py error with pip.**
-
-The spinningup rl library is the necessary lib.
-first, you should install miniconda or anaconda.
-second, install some dev dependencies.
-
-```bash
-sudo apt-get update && sudo apt-get install libopenmpi-dev
-sudo apt install libgl1-mesa-glx
-```
-third, create a conda virtual environment
-```bash
-conda create -n spinningup python=3.6   #python 3.6 is recommended
-```
-
-
-```bash
-#activate the env
-conda activate spinningup
-```
-
-then, install spiningup,is contains almost dependencies
-```bash
-# clone my version, I made some changes.
-git clone https://github.com/borninfreedom/spinningup.git
-cd spinningup
-pip install -e .
-```
-
-last, install torch and torchvision.
-
-if you have a gpu, please run this (conda will install a correct version of cudatoolkit and cudnn in the virtual env, so don't care which version you have installed in your machine.)
-```bash
-# CUDA 10.1
-conda install pytorch==1.4.0 torchvision==0.5.0 cudatoolkit=10.1 -c pytorch
-```
-
-if you only have a cpu, please run this,
-```bash
-# CPU Only
-conda install pytorch==1.4.0 torchvision==0.5.0 cpuonly -c pytorch
-```
-
-
-
-## view the train results through plot
-```bash
-python -m spinup.run plot ./logs
-```
-More detailed information please visit [plotting results](https://spinningup.openai.com/en/latest/user/plotting.html)
-
-
 # Resources about deep rl reach and grasp.
 ## Articles
 * [spinningup docs](https://spinningup.openai.com/en/latest/user/installation.html)
