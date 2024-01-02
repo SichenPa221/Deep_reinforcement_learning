@@ -1,3 +1,3 @@
-# drlgrasp
+# Deeo reinforcement learning for grasping 
 
-Train kuka robot reach a point with deep rl in pybullet.
+Train the kuka robot to reach a point with deep rl in pybullet.
